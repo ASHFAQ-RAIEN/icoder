@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>www.iCoder.com</title>
+</head>
+
+<body div style="background-image: url(back.jpg); background-attachment: fixed; background-size: 100% 100%;">
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">iCoder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"> <svg width="1em" height="1em" viewBox="0 0 16 16"
+              class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+              <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+            </svg> Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Service
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Windows Hacking</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Linux Hacking</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Android Hacking</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Wifi Hacking</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Social Meadia Accout Hacking</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+    <!--sign up button-->
+    <div>
+      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal">
+        LogIn</button>
+      <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+        data-target="#signupModal">SignUp</button>
+
+
+    </div>>
+  </nav>
+
+  <!-- login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">LogIn With Email</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">SignUp With Email</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="contact" method="post" action="/profile/signup"><input type="hidden" name="csrfmiddlewaretoken"
+              value="jCmObke1YuQlK6cx0ICrcALb5bONHsvECC5r5dCwsXgYuDqU652EAXsZVM8wwJg1">
+
+            <div class="form-group">
+              <label for="uname">Username</label>
+              <input type="text" class="form-control" id="uname" placeholder="Enter your Name" name="uname">
+              <small id="unamehelp" class="form-text text-muted px-1">
+                Your unique username must be less than 10 characters (only lowecase letters, numbers & underscores
+                allowed) with no spaces
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="name">First Name</label>
+              <input type="text" class="form-control" id="fname" placeholder="Enter your First Name" name="fname">
+            </div>
+            <div class="form-group">
+              <label for="name">Last Name</label>
+              <input type="text" class="form-control" id="lname" placeholder="Enter your Last Name" name="lname">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <div class="mx-0">
+                <div class="col-md-8 px-0">
+                  <input type="email" class="form-control" id="email" placeholder="Enter your Email" name="email">
+                  <small id="otpMessage" class="form-text"></small>
+                </div>
+                <div class="col-md-4 my-1 px-0">
+                  <button class="btn btn-danger btn-sm mt-2" id="otpbtn">Send OTP</button>
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="otp">Enter OTP</label>
+              <input type="text" class="form-control" id="otp" placeholder="Enter OTP" name="otp">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Choose a password</label>
+              <input type="password" class="form-control" id="password" placeholder="Choose a password" name="password">
+            </div>
+            <div class="form-group">
+              <label for="password2">Retype a password</label>
+              <input type="password" class="form-control" id="password2" placeholder="Retype your password"
+                name="password2">
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m"></div>
+            <input type="hidden" name="path" value="/">
+            <button type="submit" class="btn btn-danger mt-2">SignUp</button>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br><br><br><br>
+  <!-- Start Contact Area -->
+  <div class="container">
+
+    <section class="faq-contact-area ptb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="contact-wrap">
+              <div class="contact-form">
+                <div class="section-title">
+                  <span class="top-title text-danger">
+                    <center><b>Contact Us</b></center>
+                  </span>
+                  <h2>
+                    <center>Drop us a message for any query</center>
+                  </h2>
+                  <br>
+                </div>
+
+                <form id="contactForm">
+                  <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="text" name="name" id="name" class="form-control" required
+                          data-error="Please enter your name" placeholder="Your Name">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" required
+                          data-error="Please enter your email" placeholder="Your Email">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="text" name="phone_number" id="phone_number" required
+                          data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required
+                          data-error="Please enter your subject" placeholder="Your Subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                      <div class="form-group">
+                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" required
+                          data-error="Write your message" placeholder="Your Message"></textarea>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+
+                    <div class="container text-center">
+                      <button type="submit" class="default-btn page-btn btn-center">
+                        Send Message
+                      </button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End Contact Area -->
+
+  <!-- Footer -->
+  <div class="container bg-info">
+    <footer class="page-footer font-small mdb-color pt-4">
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+
+        <!-- Footer links -->
+        <div class="row text-center text-md-left mt-3 pb-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">iCoder</h6>
+            <p><b>iCoder company provide many services like wifi hacking,android hacking,windows hacking, social media
+                account hacking etc
+                and many other services....</b>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6>
+            <p>
+              WiFi Hacking
+            </p>
+            <p>
+              Android Hacking
+            </p>
+            <p>
+              Windows Hacking
+            </p>
+            <p>
+              Linux Hacking
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+            <p>
+              Your Account</a>
+            </p>
+            <p>
+              Become an Affiliate</a>
+            </p>
+            <p>
+              Shipping Rates</a>
+            </p>
+            <p>
+              Help</a>
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p>
+              <i class="fas fa-home mr-3"></i> Jansath Muzaffarnagar</p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> whitedevil786786@gmail.com</p>
+            <p>
+              <i class="fas fa-phone mr-3"></i> +91 9520136566</p>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Footer links -->
+
+        <hr>
+
+        <!-- Grid row -->
+        <div class="row d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8">
+
+            <!--Copyright-->
+            <p class="text-center text-md-left">© 2020 Copyright:
+
+              <strong> iCoder</strong>
+              </a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0">
+
+            <!-- Social buttons -->
+            <div class="text-center text-md-right">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+    </footer>
+    <!-- Footer -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
